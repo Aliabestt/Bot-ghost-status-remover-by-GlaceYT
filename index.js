@@ -18,7 +18,7 @@ app.listen(port, () => {
   console.log(`🔗 Powered By RTX`);
 });
 
-const statusMessages = ["PLAYING","MUSIC", "help"];
+const statusMessages = ["Poudlard #FR"];
 
 let currentIndex = 0;
 const channelId = '';
@@ -36,8 +36,8 @@ async function login() {
 function updateStatusAndSendMessages() {
   const currentStatus = statusMessages[currentIndex];
   
-  if(currentStatus === "help"){
-    client.user.setActivity(`help`, { type: "WATCHING" });
+  if(currentStatus === "Poudlard #RP"){
+    client.user.setActivity(`Poudlard #RP`, { type: "WATCHING" });
   } else {
     client.user.setPresence({
       activities: [{ name: currentStatus, type: ActivityType.Custom}],
